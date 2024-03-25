@@ -1,15 +1,29 @@
-package abstractfactorymethoddp;
+package designpattern;
 
-/**
- * Singleton Class
- */
-public class Singleton {
+import java.io.Serializable;
 
-    private static volatile Singleton INSTANCE = new Singleton();;
+public class Singleton implements Serializable, Cloneable {
 
-    private Singleton(){}
-    
-    public static Singleton getInstance() {
-        return INSTANCE;
-    }
+	private static final long serialVersionUID = 1L;
+
+	// private singleton instance
+	private static Singleton instance;
+
+	// private constructor
+	private Singleton() {
+	}
+
+	// public method - create a single instance
+	public static Singleton getInstance() {
+		if (instance == null) {
+			instance = new Singleton();
+		}
+		return instance;
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+
 }
