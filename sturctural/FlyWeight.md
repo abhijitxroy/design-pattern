@@ -10,3 +10,7 @@ When to Use
 -
 <img width="826" alt="image" src="https://github.com/abhijitxroy/design-pattern/assets/161963891/51982df0-b203-462b-b86a-bced60e4ff82">
 
+Example:
+-
+- Design a word processor (Text Editor)
+- Design a game
