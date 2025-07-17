@@ -11,7 +11,7 @@
 - Abstract Factory
 
 ## Structural Patterns (object composition):
-- Decorator
+- [Decorator]([url](https://github.com/abhijitxroy/design-pattern/blob/main/sturctural/decorator/Decorator.md))
 - Adapter
 - Proxy
 - Composite
