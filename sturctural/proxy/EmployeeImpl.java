@@ -1,4 +1,4 @@
-package designpattern;
+package sturctural.proxy;
 
 public class EmployeeImpl implements Employee {
     

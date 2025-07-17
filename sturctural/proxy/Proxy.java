@@ -1,4 +1,4 @@
-package designpattern;
+package sturctural.proxy;
 
 import java.util.Scanner;
 

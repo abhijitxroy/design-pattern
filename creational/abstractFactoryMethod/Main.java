@@ -1,7 +1,7 @@
 import interf.AbstractFactory;
 import interf.Profession;
 
-public class App {
+public class Main {
 
     public static void main(String[] args) {
         
@@ -11,4 +11,4 @@ public class App {
 
         engg.work();
     }
-}
+    }

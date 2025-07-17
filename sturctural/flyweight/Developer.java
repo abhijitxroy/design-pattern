@@ -1,4 +1,4 @@
-package designpattern;
+package sturctural.flyweight;
 
 public class Developer implements Employee{
 

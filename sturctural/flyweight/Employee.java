@@ -1,4 +1,4 @@
-package designpattern;
+package sturctural.code.flyweight;
 
 public interface Employee {
 

@@ -1,7 +1,6 @@
-import abstractfactorymethoddp.interf.FactoryMethod;
-import abstractfactorymethoddp.interf.Profession;
+import interf.Profession;
 
-public class App {
+public class Main {
     public static void main(String[] args) {
     
         Profession profession =  FactoryMethod.getProfession("devops");
