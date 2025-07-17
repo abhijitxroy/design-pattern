@@ -19,6 +19,40 @@
 
 ---
 
+## ❗ Why Not Inheritance?
+Using inheritance to add every combination of toppings would lead to class explosion —
+too many classes like:
+
+CheesePizza
+
+CheeseTomatoPizza
+
+CheeseTomatoOnionPizza
+
+CheeseTomatoOliveOnionPizza, and so on...
+
+Maintaining such a growing set of classes becomes unmanageable and violates the Open/Closed Principle.
+
+Decorator Pattern solves this by composing objects at runtime instead of creating a new subclass for every possible combination.
+
+---
+
+## 💥 What Is Class Explosion?
+Class explosion refers to a situation where the number of subclasses grows excessively due to every possible feature combination requiring a separate subclass.
+This makes the codebase:
+
+- Hard to maintain
+- Difficult to extend
+- Prone to duplication and errors
+The Decorator Pattern helps keep the class hierarchy flat and flexible.
+
+---
+
+## 💡 Key Benefit
+- Prevents class explosion by enabling composition over inheritance.
+
+---
+
 ## 🍕 Real-World Example
 
 **Pizza Topping Example**  
@@ -50,33 +84,3 @@ class Cheese extends ToppingDecorator {
     public double getCost() { return tempPizza.getCost() + 1.50; }
 }
 ```
-❗ Why Not Inheritance?
-Using inheritance to add every combination of toppings would lead to class explosion —
-too many classes like:
-
-CheesePizza
-
-CheeseTomatoPizza
-
-CheeseTomatoOnionPizza
-
-CheeseTomatoOliveOnionPizza, and so on...
-
-Maintaining such a growing set of classes becomes unmanageable and violates the Open/Closed Principle.
-
-Decorator Pattern solves this by composing objects at runtime instead of creating a new subclass for every possible combination.
-
-💥 What Is Class Explosion?
-Class explosion refers to a situation where the number of subclasses grows excessively due to every possible feature combination requiring a separate subclass.
-This makes the codebase:
-
-Hard to maintain
-
-Difficult to extend
-
-Prone to duplication and errors
-
-The Decorator Pattern helps keep the class hierarchy flat and flexible.
-
-💡 Key Benefit
-- Prevents class explosion by enabling composition over inheritance.
