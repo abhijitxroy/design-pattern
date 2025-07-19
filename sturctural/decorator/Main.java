@@ -1,13 +1,13 @@
-package sturctural.code.decorator;
+package sturctural.decorator;
 
 import java.util.Scanner;
 
-import sturctural.code.decorator.base.Car;
-import sturctural.code.decorator.base.FordEcoSport;
-import sturctural.code.decorator.base.FordEndeaver;
-import sturctural.code.decorator.base.FordFigo;
-import sturctural.code.decorator.decorator.Insurance;
-import sturctural.code.decorator.decorator.SeatCover;
+import sturctural.decorator.base.Car;
+import sturctural.decorator.base.FordEcoSport;
+import sturctural.decorator.base.FordEndeaver;
+import sturctural.decorator.base.FordFigo;
+import sturctural.decorator.decorator.Insurance;
+import sturctural.decorator.decorator.SeatCover;
 
 public class Main {
 	public static void main(String[] args) {
