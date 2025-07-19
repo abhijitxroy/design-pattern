@@ -11,14 +11,14 @@
 - Abstract Factory
 
 ## Structural Patterns (object composition):
-- [Decorator]([url](https://github.com/abhijitxroy/design-pattern/blob/main/sturctural/decorator/Decorator.md))
+- [Decorator](https://github.com/abhijitxroy/design-pattern/blob/main/sturctural/decorator/Decorator.md)
 - Adapter
 - Proxy
 - Composite
 
 ## Behavioral Patterns (object interaction):
 - Observer
-- Strategy
+- [Strategy](https://github.com/abhijitxroy/design-pattern/blob/main/behavioral/strategy/Strategy.md)
 - Command
 - State
 - Iterator
