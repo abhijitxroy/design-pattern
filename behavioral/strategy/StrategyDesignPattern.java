@@ -1,53 +1,59 @@
 package behavioral.strategy;
 
+// Client Code
 public class StrategyDesignPattern {
 	public static void main(String[] args) {
-		CashPayment cashPayment = new CashPayment();
-		PaymentStrategy paymentStrategy1 = new PaymentStrategy(cashPayment);
-		paymentStrategy1.processPayment(1000);
+		OnlineShoppingCart cart = new OnlineShoppingCart();
+		cart.setPaymentStrategy(new CashPaymentStrategy());
+		cart.checkout(1000);
 
-		UpiPayment upiPayment = new UpiPayment();
-		PaymentStrategy paymentStrategy2 = new PaymentStrategy(upiPayment);
-		paymentStrategy2.processPayment(800);
+		cart.setPaymentStrategy(new UpiPaymentStrategy());
+		cart.checkout(800);
 	}
 }
 
-interface Payment {
+// Strategy Interface
+interface PaymentStrategy {
 	void pay(double amount);
 }
 
-class CashPayment implements Payment {
+// Concrete Strategies-1
+class CashPaymentStrategy implements PaymentStrategy {
 
 	@Override
 	public void pay(double amount) {
-		System.out.println("Cash Payment: " + amount);
+		System.out.println("Paid " + amount + " using Cash.");
 	}
 }
 
-class CreditCardPayment implements Payment {
+// Concrete Strategies-2
+class CreditCardPaymentStrategy implements PaymentStrategy {
 
 	@Override
 	public void pay(double amount) {
-		System.out.println("CreditCard Payment: " + amount);
+		System.out.println("Paid " + amount + " using Credit Card.");
 	}
 }
 
-class UpiPayment implements Payment {
+// Concrete Strategies-3
+class UpiPaymentStrategy implements PaymentStrategy {
 
 	@Override
 	public void pay(double amount) {
-		System.out.println("UPI Payment: " + amount);
+		System.out.println("Paid " + amount + " using UPI.");
 	}
 }
 
-class PaymentStrategy {
-	private Payment payment;
+// Context
+class OnlineShoppingCart {
+	private PaymentStrategy paymentStrategy;
 
-	public PaymentStrategy(Payment payment) {
-		this.payment = payment;
+	// setter method for payment strategy
+	public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+		this.paymentStrategy = paymentStrategy;
 	}
 
-	public void processPayment(double amount) {
-		payment.pay(amount);
+	public void checkout(double amount) {
+		paymentStrategy.pay(amount);
 	}
 }
